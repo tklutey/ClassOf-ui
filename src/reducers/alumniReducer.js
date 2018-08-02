@@ -9,7 +9,6 @@ const initialState = {
 export default function alumniReducer(state = initialState, action) { 
   switch(action.type) {
     case types.LOAD_ALUMNI_SUCCESS:{
-      console.log(action)
       return Object.assign({}, state, {
         alumni: {
           firstName: action.alumni[0].firstName,

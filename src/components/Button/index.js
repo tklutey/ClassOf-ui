@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { loadAlumni } from '../../actions/alumniActions';
 
 
 class Button extends Component {
 
     handleClick = () => {
-        this.props.dispatch(loadAlumni());
+        this.props.handleClick();
     }
 
     render() {
@@ -18,10 +16,4 @@ class Button extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        buttonName : state.alumni.alumni.firstName
-    };
-};
-
-export default connect(mapStateToProps)(Button);
+export default Button;
