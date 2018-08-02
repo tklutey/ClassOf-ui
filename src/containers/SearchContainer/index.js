@@ -16,11 +16,10 @@ class SearchContainer extends Component {
     }
 
     render() {
-        console.log(this.props.alumniElement)
         return(
             <div>
                 <Button handleClick={this.handleClick}/>
-                <Route path={this.props.match.path + '/response'} render={() => <Response elements={this.props.alumniElement} />}/>
+                <Route exact path={this.props.match.path + '/response'} render={() => <Response elements={this.props.alumniElement} />}/>
             </div>
         )
     }
