@@ -19,7 +19,7 @@ class SearchContainer extends Component {
         return(
             <div>
                 <Button handleClick={this.handleClick}/>
-                <Route exact path={this.props.match.path + '/response'} render={() => <Response elements={this.props.alumniElement} />}/>
+                <Route exact path={this.props.match.path + '/response'} render={() => <Response elements={this.props.alumniElements} />}/>
             </div>
         )
     }
@@ -27,7 +27,7 @@ class SearchContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        alumniElement: state.alumni.alumni,
+        alumniElements: state.alumni.alumni,
     };
 };
 

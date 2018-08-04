@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
+import AlumniCard from '../AlumniCard';
 
 class Response extends Component {
 
     render() {
-        console.log('render')
-        var array = []
-        for (var i in this.props.elements) {
-            array.push(this.props.elements[i])
-        }
+        const alumniElements = this.props.elements;
+        const alumniItems = alumniElements.map((alumni) => 
+            <AlumniCard alumni={alumni} key={alumni._id} />
+        )
         return (
-            <div>
-                {array.map(element => <div> {element} </div>)} 
-            </div>
-        );
+            <ul> {alumniItems} </ul>
+        )
     }
 }
 
