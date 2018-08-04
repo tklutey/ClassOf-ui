@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Button from '../../components/Button';
-import Response from '../../components/Response';
-import { loadAlumni } from '../../actions/alumniActions';
+import Button from '../components/Button';
+import Response from '../containers/SearchResponseContainer';
+import { loadAlumni } from '../actions/alumniActions';
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router'
 

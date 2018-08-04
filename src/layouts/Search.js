@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchContainer from '../../containers/SearchContainer';
+import SearchContainer from '../containers/SearchContainer';
 
 class Search extends Component {
     render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import AlumniCard from '../AlumniCard';
+import AlumniCard from '../components/AlumniCard';
 
-class Response extends Component {
+class SearchResponseContainer extends Component {
 
     render() {
         const alumniElements = this.props.elements;
@@ -14,4 +14,4 @@ class Response extends Component {
     }
 }
 
-export default Response;
+export default SearchResponseContainer;
