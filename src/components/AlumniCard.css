@@ -1,3 +1,8 @@
 .alumniCard {
-    border-style: solid !important;
+    border-style: solid;
+    margin: 5px;
+}
+.alumniCard:hover {
+    background-color:lightblue;
+    cursor:pointer;
 }
