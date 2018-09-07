@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
-import './AlumniCard.css';
+import './AlumniPage.css';
 
 
 class AlumniPage extends Component {
 
-    currentJob = (alumni) => {
+    getCurrentJob = (alumni) => {
         for (var i = 0; i < alumni.jobs.length; i++) {
             if (alumni.jobs[i].isCurrent) {
                 return alumni.jobs[i];
+            }
+            else {
+                return alumni.jobs[0]
             }
         }
         return null;
     }
 
+    handleClick = () => {
+        this.props.handleClick();
+    }
+
     render() {
-        var currentJob = this.currentJob(this.props.alumni);
+        var currentJob = this.getCurrentJob(this.props.alumni);
         return (
-            <div className="alumniCard">
+            <div className="alumniPage" onClick={this.handleClick}>
                 <h2> {this.props.alumni.firstName} {this.props.alumni.lastName} </h2>
                 <h3> {this.props.alumni.classYear} </h3>
                 <h3> Contact </h3>

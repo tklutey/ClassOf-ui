@@ -2,9 +2,6 @@ import * as types from '../actions/actionTypes';
 
 const initialState = {
     alumni:[]
-    // {
-    //   firstName:null
-    // }
 }
 
 export default function alumniReducer(state = initialState, action) { 
@@ -13,7 +10,6 @@ export default function alumniReducer(state = initialState, action) {
       return Object.assign({}, state, {
         alumni: action.alumni
       })
-
     }
     default: 
       return state;

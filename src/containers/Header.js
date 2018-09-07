@@ -5,15 +5,15 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <nav>
-                    <Link to="/">Home</Link>
-                </nav>
-                <nav>
-                    <Link to="/search">Search</Link>
-                </nav>
-                <nav>
-                    <Link to="/create">Profile</Link>
-                </nav>
+                <Link to="/">
+                    <button> Home </button>
+                </Link>
+                <Link to="/search">
+                    <button> Search </button>
+                </Link>
+                <Link to="/create">
+                    <button> Profile </button>
+                </Link>                
             </div>
         );
     }

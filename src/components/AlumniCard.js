@@ -4,7 +4,7 @@ import './AlumniCard.css';
 class AlumniCard extends Component {
 
     handleClick = () => {
-        this.props.testClick(this.props.alumni);
+        this.props.handleClick(this.props.alumni);
     }
 
     render() {

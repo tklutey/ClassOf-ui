@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import ProfileForm from '../containers/ProfileForm';
 
 class Profile extends Component {
     render() {
         return (
-            <h1> Profile Page </h1>
+            <div>
+                <h1> Profile Page </h1>
+                <ProfileForm />
+            </div>
         );
     }
 }

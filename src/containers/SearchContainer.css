@@ -1,0 +1,16 @@
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchButton {
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.searchResponse {
+    flex: flex-basis;
+}
+

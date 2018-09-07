@@ -3,6 +3,6 @@
     margin: 5px;
 }
 .alumniCard:hover {
-    background-color:lightblue;
+    background-color: white;
     cursor:pointer;
 }

@@ -15,18 +15,24 @@ class SearchResponseContainer extends Component {
         this.setState({ selectedAlumni : alumni._id })
     }
 
+    deselectAlumni = () => {
+        this.setState({ selectedAlumni : null })
+    }
+
     render() {
         var content;
         const alumniElements = this.props.elements;
         const alumniItems = alumniElements.map((alumni) => { 
             if(alumni._id === this.state.selectedAlumni) {
-                return <AlumniPage alumni={alumni} key={alumni._id} />
+                return <AlumniPage alumni={alumni} key={alumni._id} handleClick={this.deselectAlumni} />
             }
-            return <AlumniCard alumni={alumni} key={alumni._id} testClick={this.selectAlumni} />
+            return <AlumniCard alumni={alumni} key={alumni._id} handleClick={this.selectAlumni} />
         });
-        content = <ul> {alumniItems} </ul>;
+        content = <span> {alumniItems} </span> ;
         return (
-            content
+            <div className={this.props.className}>
+                {content}
+            </div>
         )
     }
 }

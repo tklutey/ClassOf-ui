@@ -1,0 +1,9 @@
+.alumniPage {
+    border-style: solid;
+    margin: 5px;
+    padding: 20%;
+}
+.alumniPage:hover {
+    cursor:pointer;
+    background-color: white;
+}

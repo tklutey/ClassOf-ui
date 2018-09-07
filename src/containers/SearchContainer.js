@@ -5,8 +5,7 @@ import Response from '../containers/SearchResponseContainer';
 import { loadAlumni } from '../actions/alumniActions';
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router'
-
-
+import './SearchContainer.css';
 
 class SearchContainer extends Component {
 
@@ -17,9 +16,9 @@ class SearchContainer extends Component {
 
     render() {
         return(
-            <div>
-                <Button handleClick={this.handleClick}/>
-                <Route exact path={this.props.match.path + '/response'} render={() => <Response elements={this.props.alumniElements} />}/>
+            <div className="searchContainer">
+                <Button className="searchButton" handleClick={this.handleClick}/>
+                <Route exact path={this.props.match.path + '/response'} render={() => <Response className="searchResponse" elements={this.props.alumniElements} />}/>
             </div>
         )
     }
