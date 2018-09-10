@@ -1,3 +1,5 @@
+const base_url = 'http://localhost:5000/'
+
 export function getAllAlumni() {
   var configuration = {
     method: 'GET',
@@ -6,7 +8,26 @@ export function getAllAlumni() {
       'charset':'utf-8',
     }
   }
-  return fetch('http://localhost:5000/alumni', configuration)
+  return fetch(base_url + 'alumni', configuration)
+    .then((response) => {
+      return response.json()
+    }).catch(error => {
+      console.log(error)
+      return error;
+    })
+}
+
+export function searchAlumni(query) {
+  var configuration = {
+    method: 'GET',
+    headers: {
+      'Content-Type':'application/json',
+      'charset':'utf-8',
+    },
+    
+  }
+  var url = base_url + 'search?query=' + query;
+  return fetch(url, configuration)
     .then((response) => {
       return response.json()
     }).catch(error => {
@@ -16,7 +37,6 @@ export function getAllAlumni() {
 }
 
 export function createAlumni(alumni) {
-  console.log('create')
   var configuration = {
     method: 'POST', 
     headers: {
@@ -24,7 +44,7 @@ export function createAlumni(alumni) {
     }, 
     body: JSON.stringify(alumni)
   }
-  return fetch('http://localhost:5000/alumni', configuration)
+  return fetch(base_url + 'alumni', configuration)
     .then((response) => {
       return response.json()
     }).catch(error => {

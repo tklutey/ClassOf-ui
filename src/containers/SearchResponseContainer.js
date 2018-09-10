@@ -21,7 +21,7 @@ class SearchResponseContainer extends Component {
 
     render() {
         var content;
-        const alumniElements = this.props.elements;
+        const alumniElements = this.props.elements.results;
         const alumniItems = alumniElements.map((alumni) => { 
             if(alumni._id === this.state.selectedAlumni) {
                 return <AlumniPage alumni={alumni} key={alumni._id} handleClick={this.deselectAlumni} />
